@@ -68,7 +68,7 @@ export default function Game() {
   const Restart = ({ restartClick }: restartProps) => {
     return (
       <div className="text-center">
-        <div className="font-bold text-xl mb-4">Game Over</div>
+        {win ? (<div className="font-bold text-xl mb-4">Game Over</div>) : (<div className="text-xl mb-4">Solution: <b className="uppercase">{solution}</b></div>)}
         <div><button className="rounded bg-gray-200 px-4 py-2 font-bold cursor-pointer transition-all hover:bg-gray-300" onClick={restartClick}>Restart</button></div>
       </div>
     )
